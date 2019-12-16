@@ -6,12 +6,89 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hand__card {
+  text-align: center;
+}
+
+.hand__card__content {
+  height: 500px;
+  width: 300px;
+  position: relative;
+}
+
+.hand__card__content--verso {
+  background-color: #b81414;
+  color: #f2f2f2;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #a11212;
+  border-radius: 25px;
+}
+
+.hand__card__content--recto {
+  background-color: #3d34bc;
+  color: #f2f2f2;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #342ca0;
+  border-radius: 25px;
+  z-index: -1;
 }
 
 .hand__card__button {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  -webkit-box-shadow: 2px 4px 6px 0px #737373;
+          box-shadow: 2px 4px 6px 0px #737373;
   text-transform: uppercase;
+  width: 100%;
+  background-color: #e382db;
+  -webkit-transition: 0.25s background-color;
+  transition: 0.25s background-color;
+  border: none;
+}
+
+.hand__card__button:hover {
+  background-color: #d02fc2;
+  -webkit-transition: 0.25s background-color;
+  transition: 0.25s background-color;
+}
+
+.hand__card__button:active {
+  width: 80%;
+  -webkit-transition: 0.1s width;
+  transition: 0.1s width;
 }
 /*# sourceMappingURL=style.css.map */
