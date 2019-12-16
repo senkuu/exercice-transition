@@ -42,14 +42,12 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid #a11212;
-  border-radius: 25px;
 }
 
 .hand__card__content--recto {
   background-color: #3d34bc;
-  color: #f2f2f2;
-  height: 100%;
+  color: rgba(0, 0, 0, 0);
+  height: 0%;
   width: 100%;
   position: absolute;
   display: -webkit-box;
@@ -61,8 +59,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid #342ca0;
-  border-radius: 25px;
   z-index: -1;
 }
 
@@ -96,7 +92,67 @@
   transition: 0.1s width;
 }
 
-.hand__card__button:active ~ .hand__card__content .hand__card__content--verso {
-  background-color: green;
+.hand__card__button:active + .hand__card__content .hand__card__content--verso {
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-name: cardRotationIn;
+          animation-name: cardRotationIn;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  color: rgba(242, 242, 242, 0);
+  height: 0%;
+}
+
+.hand__card__button:active + .hand__card__content .hand__card__content--recto {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: cardRotationOut;
+          animation-name: cardRotationOut;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  color: #f2f2f2;
+  height: 100%;
+}
+
+@-webkit-keyframes cardRotationIn {
+  from {
+    height: 100%;
+  }
+  to {
+    color: rgba(242, 242, 242, 0);
+    height: 0%;
+  }
+}
+
+@keyframes cardRotationIn {
+  from {
+    height: 100%;
+  }
+  to {
+    color: rgba(242, 242, 242, 0);
+    height: 0%;
+  }
+}
+
+@-webkit-keyframes cardRotationOut {
+  from {
+    height: 0%;
+  }
+  to {
+    color: #f2f2f2;
+    height: 100%;
+  }
+}
+
+@keyframes cardRotationOut {
+  from {
+    height: 0%;
+  }
+  to {
+    color: #f2f2f2;
+    height: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
