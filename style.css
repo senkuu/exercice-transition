@@ -17,13 +17,14 @@
 }
 
 .hand__card {
-  text-align: center;
-}
-
-.hand__card__content {
   height: 500px;
   width: 300px;
   position: relative;
+}
+
+.hand__card__content {
+  position: relative;
+  height: 80%;
 }
 
 .hand__card__content--verso {
@@ -78,6 +79,9 @@
   -webkit-transition: 0.25s background-color;
   transition: 0.25s background-color;
   border: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .hand__card__button:hover {
@@ -90,5 +94,9 @@
   width: 80%;
   -webkit-transition: 0.1s width;
   transition: 0.1s width;
+}
+
+.hand__card__button:active ~ .hand__card__content .hand__card__content--verso {
+  background-color: green;
 }
 /*# sourceMappingURL=style.css.map */
